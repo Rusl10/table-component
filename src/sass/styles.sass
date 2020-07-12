@@ -1,0 +1,216 @@
+#app
+	color: #282136
+	font-family: Source Sans Pro
+	margin-top: 60px	
+
+
+.container
+  max-width: 1540px
+  margin: 0 auto
+  padding: 0 10px 
+
+
+.button
+	display: inline-block
+	border: none
+	color: #5B5E77
+	text-decoration: none
+	background: #fff
+	border: 1px solid #C6CBD4
+	border-radius: 4px
+	padding: 8px 16px
+	font-size: 14px
+	font-family: Source Sans Pro
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	&:focus, &:hover
+		text-decoration: none
+
+.select
+	border: 1px solid #D5DAE0
+	color: #5B5E77
+	padding-left: 15px
+	padding-right: 11px
+	outline: none
+
+h1
+	font-weight: 600
+	font-size: 32px
+	margin-bottom: 16px 
+
+select
+	cursor: pointer
+	font-size: 14px
+	font-family: Source Sans Pro
+
+.controls
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	color: #3D374A
+	align-items: center
+	&__sorting
+		color: #282136
+	&__tools
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+.select-column
+	display: flex
+	flex-wrap: wrap
+	list-style-type: none
+	flex-grow: 1
+	padding-left: 16px
+	&__item
+		padding: 3px 5px
+		margin-right: 12px
+		cursor: pointer
+		border-radius: 2px
+		&:last-child
+			margin-right: 0
+
+.pagination
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: center
+	&__btn
+		border: 1px solid #D5DAE0
+		box-sizing: border-box
+		border-radius: 2px
+		width: 32px
+		height: 32px
+		cursor: pointer
+		outline: none
+		&--disabled
+			border: 1px solid #E1E4EA
+			cursor: default
+	&__prev
+		background: url('./images/left.svg') no-repeat center
+		
+
+	&__next
+		background: url('./images/right.svg') no-repeat center
+	&__pages
+		margin-left: 8px
+		margin-right: 8px
+
+.pages
+	color: #5B5E75
+	&__items
+		color: #3D374A
+
+.tools
+	&__select
+		&:first-child
+			width: 125px
+		&--disabled
+			cursor: default
+	&__delete
+		margin-right: 16px
+		border-color: #C6CBD4
+		color: #C6CBD4	
+		background: #FBFBFB
+		cursor: default
+		height: 32px
+		&--active
+			color: #fff
+			background: #00A11E
+			cursor: pointer
+
+.pagination
+	margin-left: 16px
+	margin-right: 16px
+
+.table
+	width: 100%
+	border-spacing: 0 17px
+	&__thead
+		border-bottom: 2px solid #EDEDED
+
+	&__th
+		&-content
+			&--active
+				color: #00A11E
+				cursor: pointer
+	&__tr
+		&:nth-of-type(even)
+			background-color: #F8F9FA
+			.table__td
+				border-top: 17px solid #F8F9FA
+				border-bottom: 17px solid #F8F9FA
+	&__td
+		text-align: center
+
+
+.select-column__item--active
+	background: #00A11E
+	color: #fff
+
+.select-columns
+	cursor: pointer
+	position: relative
+	border-radius: 2px
+	background: #fff
+	z-index: 1
+	display: flex
+	box-sizing: border-box
+	height: 32px
+	flex-wrap: wrap
+	align-items: center
+	&--active
+		//border-radius: 4px 4px 0 0
+	&__arrow
+		background: url('./images/left.svg') no-repeat center
+		transform: rotate(-90deg)
+		width: 8px
+		height: 14px	
+		margin-left: 6px
+	&__title
+		font-size: 14px	
+
+.dropdown
+	background: #fff
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	transform: translateY(104%)
+	max-height: 0
+	width: 100%
+	height: 243px
+	overflow-x: hidden
+	overflow-y: scroll
+	border-radius: 4px
+	overflow: hidden
+	padding-bottom: 10px
+	transition: all .5s ease
+	&--active
+		max-height: 243px
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16)
+	&__list
+		margin-top: 20px
+		max-height: 233px
+		overflow-y: auto
+		list-style-type: none
+		padding-left: 17px
+		margin-right: 4px
+		&::-webkit-scrollbar
+			width: 4px
+		&::-webkit-scrollbar-track
+			background-color: transparent
+			border: 4px solid transparent
+			background-clip: content-box
+			border-radius: 8px
+
+		&::-webkit-scrollbar-thumb
+			border-radius: 8px
+			background-color: #D5DAE0
+	&__item
+		margin-bottom: 13px
+
+
